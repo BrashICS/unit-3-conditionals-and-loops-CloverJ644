@@ -94,8 +94,9 @@ function startGame() {
     alert(`You are alone. You, your gear, and a lantern they provided you. The wind howls around you.`);
     alert(`Get moving.`);
     alert(`You enter the forest, dark trees looming over you as you trek along the dirt path that leads into the forest. It doesn't take long for the path to grow rougher, less proper. You begin to trip and stumble over roots and the like. It seems this is as far as anyone's gotten...`);
-    alert(`> 1 light your lantern to see your surroundings better, or > 2 unsheath your sword and cut through the roots.`)
-    let lan_or_swr = prompt(`please choose`);
+    let lan_or_swr = prompt(`> 1 Light your lantern to see your surroundings better
+    /
+    > 2 Unsheath your sword and cut through the roots.`);
     if (lan_or_swr == 1) {
         lantern_use()
     }
@@ -105,8 +106,21 @@ function startGame() {
     }
 
     alert(`Continuing through the forest with flickering lantern light, you look at the trees around you, towering over you. The forest is thick, dark, and unruly. It's as if the forest is alive with death itself...`);
-    alert(`... Unfortunately, that's all I have for the demo! I'll add more later, I prommy <:3`);
-    return `get bent loser >:P`;
+    alert(`In your dim lantern light, you can see the gnarled black branches that seem to reach towards you. The forest is eerily quiet, only the sounds of your own booted footsteps against crunching grass, the wind whistling through the branches, and the slight clinks of your lantern and sword.`);
+    alert(`... Is something watching you?`);
+    let paranoia = prompt(`> 1 Of course not, why would there be? 
+    /
+    > 2 I swear there is`);
+    if (paranoia == 1) {
+        paranoia_no()
+    }
+
+    if (paranoia == 2) {
+        paranoia_yes()
+    }
+
+    alert(`... And unfortunately, that's all I have for the demo! I'll add more later, I prommy <:3`);
+    return `Thank you for playing!`;
 }
 
 function lantern_use() {
@@ -117,4 +131,54 @@ function lantern_use() {
 function sword_use() {
     alert(`You unsheath your sword and brandish it, slicing through a root that had snagged your foot.`);
     alert(`You make some progress, though it takes a bit of blind swinging, which is rather dangerous. You might've nicked yourself on your blade, but you aren't sure. After a few feet of struggling, you cave and light your lantern. With a light to guide you now, you continue through the forest.`)
+}
+
+function paranoia_no() {
+    alert(`You shrug off the feeling. It's nothing. You haven't seen a living thing since you entered this forest, and the whole reason you're here is to see if it's worth people coming to this place, and living here. Even if something /was/ looking at you, it's probably just some kind of animal. Nothing to worry about.`);
+    alert(`You trek onwards.`);
+}
+
+function paranoia_yes() {
+    alert(`You don't know when exactly it started, but something is watching you. Something is /looking at you/. Studying you. Analytically. Clinically, almost...`);
+    alert(`It's unsettling. You find yourself looking over your shoulder, checking, trying to catch a glimpse of the creature. Whatever it is, it's following you. It's /hunting/ you...`);
+    alert(`What do you do?`);
+    let hunted_choice = prompt(`> 1 Unsheath your sword and brandish it
+        /
+        > 2 Open your book of spells and cast something
+        /
+        > 3 Shine your lantern towards the trees`);
+    if (hunted_choice = 1) {
+        hunted_sword()
+        return `The darkness consumes you. Your body is never found.`;
+    }
+
+    if (hunted_choice = 2) {
+        hunted_magic()
+    }
+
+    if (hunted_choice = 3) {
+        hunted_lantern()
+    }
+    alert(`With your fears eased, at least slightly, you continue on.`);
+}
+
+function hunted_sword() {
+    alert(`Your sword gives a familiar metallic whispering sound as you unsheath it from its leather, and you hold it out towards the trees behind you`);
+    alert(`It's quiet.`);
+    alert(`Carefully, you take a step towards the trees. You know that the creature is there. Right in front of you, hidden in the darkness of the trees. You level the sword at it.`);
+    alert(`Cowardly beast. It won't even come out and face you. In a moment of bravery, you call out in time with a rustling of the brush, and—`);
+}
+
+function hunted_magic() {
+    alert(`You flip open your spellbook, looking through the pages. There must be something helpful in here, surely... Something useful. Someething to fight with.`);
+    alert(`It's quiet.`);
+    alert(`Finally, you find something you can use. A simple fire spell. It won't take much energy, and it should scare any creature that could be following you off. Flame sparks against your palm before flaring out in a burst. It brightens the forest for a moment. There's a flicker of a reflection in the eyes of a beast, but you see in the darkness that it scurries away.`);
+    alert(`... Ah. The fire must've frightened it. Well, you suppose it isn't a problem anymore.`);
+}
+
+function hunted_lantern() {
+    alert(`You turn your lightsource towards the trees, taking a few steps forward. The orange glow of the firelight illuminates the trees, letting you see the darkened wood of the forest around you.`);
+    alert(`It's quiet.`);
+    alert(`You can't see anything. Even as you step further into the wood, holding out your lantern. Even in the furthest reaches of the light, you can't see anything but trees and branches. It seems there wasn't anything after all...`);
+    alert(`Well, that's a relief.`);
 }
