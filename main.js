@@ -94,8 +94,8 @@ function startGame() {
     alert(`Get moving.`);
     alert(`You enter the forest, dark trees looming over you as you trek along the dirt path that leads into the forest. It doesn't take long for the path to grow rougher, less proper. You begin to trip and stumble over roots and the like. It seems this is as far as anyone's gotten...`);
     let lan_or_swr = prompt(`> 1 Light your lantern to see your surroundings better
-    /
-    > 2 Unsheath your sword and cut through the roots.`);
+/
+> 2 Unsheath your sword and cut through the roots.`);
     if (lan_or_swr == 1) {
         lantern_use()
     }
@@ -108,8 +108,8 @@ function startGame() {
     alert(`In your dim lantern light, you can see the gnarled black branches that seem to reach towards you. The forest is eerily quiet, only the sounds of your own booted footsteps against crunching grass, the wind whistling through the branches, and the slight clinks of your lantern and sword.`);
     alert(`... Is something watching you?`);
     let paranoia = prompt(`> 1 Of course not, why would there be? 
-    /
-    > 2 I swear there is`);
+/
+> 2 I swear there is`);
     if (paranoia == 1) {
         paranoia_no()
     }
@@ -142,20 +142,20 @@ function paranoia_yes() {
     alert(`It's unsettling. You find yourself looking over your shoulder, checking, trying to catch a glimpse of the creature. Whatever it is, it's following you. It's /hunting/ you...`);
     alert(`What do you do?`);
     let hunted_choice = prompt(`> 1 Unsheath your sword and brandish it
-        /
-        > 2 Open your book of spells and cast something
-        /
-        > 3 Shine your lantern towards the trees`);
-    if (hunted_choice = 1) {
+/
+> 2 Open your book of spells and cast something
+/
+> 3 Shine your lantern towards the trees`);
+    if (hunted_choice == 1) {
         hunted_sword()
         return `The darkness consumes you. Your body is never found. [Hunted Ending]`;
     }
 
-    if (hunted_choice = 2) {
+    if (hunted_choice == 2) {
         hunted_magic()
     }
 
-    if (hunted_choice = 3) {
+    if (hunted_choice == 3) {
         hunted_lantern()
     }
     alert(`With your fears eased, at least slightly, you continue on.`);
