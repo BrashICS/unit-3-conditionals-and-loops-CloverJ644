@@ -148,7 +148,7 @@ function paranoia_yes() {
         > 3 Shine your lantern towards the trees`);
     if (hunted_choice = 1) {
         hunted_sword()
-        return `The darkness consumes you. Your body is never found.`;
+        return `The darkness consumes you. Your body is never found. [Hunted Ending]`;
     }
 
     if (hunted_choice = 2) {
