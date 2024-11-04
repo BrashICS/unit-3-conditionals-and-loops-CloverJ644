@@ -161,7 +161,7 @@ function hunted_sword() {
 }
 
 function hunted_magic() {
-    alert(`You flip open your spellbook, looking through the pages. There must be something helpful in here, surely... Something useful. Someething to fight with.`);
+    alert(`You flip open your spellbook, looking through the pages. There must be something helpful in here, surely... Something useful. Something to fight with.`);
     alert(`It's quiet.`);
     alert(`Finally, you find something you can use. A simple fire spell. It won't take much energy, and it should scare any creature that could be following you off. Flame sparks against your palm before flaring out in a burst. It brightens the forest for a moment. There's a flicker of a reflection in the eyes of a beast, but you see in the darkness that it scurries away.`);
     alert(`... Ah. The fire must've frightened it. Well, you suppose it isn't a problem anymore.`);
@@ -173,3 +173,59 @@ function hunted_lantern() {
     alert(`You can't see anything. Even as you step further into the wood, holding out your lantern. Even in the furthest reaches of the light, you can't see anything but trees and branches. It seems there wasn't anything after all...`);
     alert(`Well, that's a relief.`);
 }
+
+// Okee dokee, time for else-ifs!
+// Setup the menu
+function menu() {let message = `Hi! Please make a selection:
+1 - Play
+2 - Options
+3 - DLC
+4 - Check for Updates
+5 - Exit
+`;
+// Prompt with the menu
+let selection = Number(prompt(message));
+
+if (selection == 1) {
+    alert("Let's play!");
+    play();
+} else if (selection == 2) {
+    alert("You selected Options");
+} else if (selection == 3) {
+    alert("No new DLC at this time");
+} else if (selection == 4) {
+    alert("Everything is up to date");
+} else if (selection == 5) {
+    alert("Bye!")
+}
+}
+
+function play() {let difficulty = `What difficulty do you want to play?
+1 - Easy
+2 - Medium
+3 - Hard
+`;
+
+let diff_lvl = Number(prompt(difficulty));
+
+if (diff_lvl == 1) {
+    alert("You selected the Easy Route! No worries, I won't judge you for it");
+} else if (diff_lvl == 2) {
+    alert("You selected the Medium Route! Most people select Medium")
+} else if (diff_lvl == 3) {
+    alert("You selected the Hard Route! I see you like a challenge!")
+}
+}
+
+function greeting(hour) {
+    if ((hour >= 0) && (hour <= 11) || hour == 24) {
+        return "Good morning!";
+    } else if ((hour >= 12) && (hour <= 17)) {
+        return "Good afternoon!";
+    } else if ((hour >= 18) && (hour <= 23)) {
+        return "Good evening!";
+    } else if ((hour < 0) || (hour > 24)) {
+        return "Invalid hour! What are you on about? It's just the hour, not the minutes, if that's your problem... If not, get bent";
+    }
+}
+
