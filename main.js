@@ -98,9 +98,7 @@ function startGame() {
 > 2 Unsheath your sword and cut through the roots.`);
     if (lan_or_swr == 1) {
         lantern_use()
-    }
-
-    if (lan_or_swr == 2) {
+    } else if (lan_or_swr == 2) {
         sword_use()
     }
 
@@ -112,9 +110,7 @@ function startGame() {
 > 2 I swear there is`);
     if (paranoia == 1) {
         paranoia_no()
-    }
-
-    if (paranoia == 2) {
+    } else if (paranoia == 2) {
         paranoia_yes()
     }
 
@@ -149,13 +145,9 @@ function paranoia_yes() {
     if (hunted_choice == 1) {
         hunted_sword()
         return `The darkness consumes you. Your body is never found. [Hunted Ending]`;
-    }
-
-    if (hunted_choice == 2) {
+    } else if (hunted_choice == 2) {
         hunted_magic()
-    }
-
-    if (hunted_choice == 3) {
+    } else if (hunted_choice == 3) {
         hunted_lantern()
     }
     alert(`With your fears eased, at least slightly, you continue on.`);
