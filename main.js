@@ -230,3 +230,6 @@ function greeting(hour) {
     }
 }
 
+function two_digit() {
+    
+}
