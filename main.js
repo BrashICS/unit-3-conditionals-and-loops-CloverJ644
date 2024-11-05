@@ -12,7 +12,7 @@
 'use strict';
 
 /*** Event Listeners ***/
-
+document.getElementById("guess").addEventListener("click", guess_10);
 
 
 /*** Functions ***/
@@ -197,7 +197,11 @@ if (selection == 1) {
 } else if (selection == 4) {
     alert("Everything is up to date");
 } else if (selection == 5) {
-    alert("Bye!")
+    alert("Bye!");
+} else if (selection == null) {
+    return `You could've just clicked exit y'know...`;
+} else {
+    alert("Invalid input, please try again.");
 }
 }
 
@@ -230,6 +234,51 @@ function greeting(hour) {
     }
 }
 
-function two_digit() {
-    
+function is_number() {
+    if (typeof my_variable == "number") {
+        return `True`;
+    } else {
+        return `False`;
+    }
+}
+
+function which_day(n) {
+    if (typeof n != "number") {
+        return `That's not a number, what are you doing?`;
+    }
+
+    if (n == 1) {
+        return `It's Sunday! I know tomorrow's Monday, but enjoy your day, the weekend's not over yet!`;
+    } else if (n == 2) {
+        return `It's Monday! Power through it, the week's just starting.`;
+    } else if (n == 3) {
+        return `Sparkle on! It's Tuesday, don't forget to be yourself!`;
+    } else if (n == 4) {
+        return `It is Wednesday my dudes. AaaaaAAAAAAAUUHH—`;
+    } else if (n == 5) {
+        return `It's Thursday! Y'know, if you pronounced 'Thursday' like 'Thaursday', that'd be... pretty funny.`;
+    } else if (n == 6) {
+        return `It's Friday! I won't hit you with the song, don't worry. But I hope you relax, the week's almost over!`;
+    } else if (n == 7) {
+        return `It's Saturday! Take it easy, yeah? It's only the first day of the weekend.`;
+    } else {
+        return `What are you doing? Stop that, that's not a valid answer.`;
+    }
+}
+
+function guess_10() {
+    let hidden_number = Math.ceil(Math.random() * 10);
+    let user_input = +prompt(`Please select a number from 1–10!`);
+
+    if (user_input == hidden_number) {
+        alert(`That's right! The number was ${hidden_number}! Nice job`);
+    } else if (user_input > 10 || user_input < 1) {
+        alert(`That's not a valid input! I told you, 1–10! The number was ${hidden_number}`);
+    } else if (user_input < hidden_number) {
+        alert(`Nope, too low! The number was ${hidden_number}`);
+    } else if (user_input > hidden_number) {
+        alert(`Nope, too high! The number was ${hidden_number}`);
+    } else {
+        alert(`Uhh, looks like there was an error... Maybe try again?`);
+    }
 }
