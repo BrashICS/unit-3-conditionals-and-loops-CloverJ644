@@ -177,7 +177,8 @@ function hunted_lantern() {
 
 // Okee dokee, time for else-ifs!
 // Setup the menu
-function menu() {let message = `Hi! Please make a selection:
+function menu() {
+    let message = `Hi! Please make a selection:
 1 - Play
 2 - Options
 3 - DLC
@@ -205,7 +206,8 @@ if (selection == 1) {
 }
 }
 
-function play() {let difficulty = `What difficulty do you want to play?
+function play() {
+let difficulty = `What difficulty do you want to play?
 1 - Easy
 2 - Medium
 3 - Hard
