@@ -284,3 +284,34 @@ function guess_10() {
         alert(`Uhh, looks like there was an error... Maybe try again?`);
     }
 }
+
+function countdown(start, stop) {
+    if (start <= stop) {
+        return -1;
+    } else {
+        let n = start;
+        let loops = 0;
+        while (n >= stop) {
+            console.log(n);
+            n--;
+            loops++;
+        }
+        return loops;
+    }
+}
+
+function random_until(min, max, stop) {
+    if (max <= min) {
+        return -1;
+    } else if (min <= stop <= max) {
+        let n = randInt(min, max);
+        while (n != stop) {
+            console.log(n);
+            n = randInt(min, max);
+        }
+        return stop;
+    } else {
+        return -1;
+    }
+}
+
