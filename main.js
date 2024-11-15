@@ -315,3 +315,31 @@ function random_until(min, max, stop) {
     }
 }
 
+// I return. I got sick lol
+function build_string() {
+    let output = "";
+    let input;
+    do {
+      input = prompt("Enter a string of text or a single 'q' to quit: ");
+      output += input;
+    
+    } while (input.toLowerCase() != "q");
+  
+    return output;
+  }
+
+  function negative_only() {
+    let input;
+    do {
+        input = +prompt(`please enter a negative number`);
+    } while (n < 0 && (isNaN(n) = false));
+    return input;
+  }
+
+  function parrot() {
+    let input;
+    do {
+        input = prompt.toUpperCase(`please enter some text or the word quit`)
+        console.log(input)
+    } while ((input).toLowerCase != `quit`)
+  }
