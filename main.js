@@ -315,6 +315,17 @@ function random_until(min, max, stop) {
     }
 }
 
+function average(n) {
+    let avg = 0
+    let count = 1
+    while (count >= n) {
+        avg += prompt(`Please enter value ${count}/${n}`);
+        count++;
+    }
+    avg = round(avg / n, 1);
+    console.log(`The average is ${avg}`);
+}
+
 // I return. I got sick lol
 function build_string() {
     let output = "";
@@ -343,3 +354,37 @@ function build_string() {
         console.log(input)
     } while ((input).toLowerCase != `quit`)
   }
+
+  function count_up(start, stop) {
+    for (let incre = start; incre <= stop; incre++) {
+        console.log(incre);
+    }
+  }
+  
+  function count_down(start,stop) {
+    for (let decre = start; decre >= stop; decre--) {
+        console.log(decre);
+    }
+  }
+
+function print_chars(str, step) {
+    for (let char = 0; char <= str.length; char += step) {
+        console.log(str[char]);
+    }
+}
+
+function sum(n) {
+    let count = 1;
+    let num = 1;
+    let fin = 0
+    for (num = 1; count <= n; fin += num++) {
+        count++;
+    }
+    console.log(`The sum is equal to ${fin}`);
+}
+
+function count4(begin, end) {
+    for (let div = 0; (num % 4 == 0); div++1) {
+//Aaah, not done!!!
+    }
+}
