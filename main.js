@@ -384,7 +384,7 @@ function sum(n) {
 }
 
 function count4(begin, end) {
-    for (let div = 0; (num % 4 == 0); div++1) {
-//Aaah, not done!!!
-    }
+    let div = 0
+    let num = 0
+    // Still not done...
 }
